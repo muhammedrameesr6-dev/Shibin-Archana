@@ -1,30 +1,25 @@
 /* ==========================================================================
    Shibin & Archana — Wedding Invitation
-   Royal Kerala Wedding Theme · Cherry Red & Temple Gold · Ivory Parchment Canvas
+   Royal Cherry Red & Temple Gold Theme
+   First Page Image Focused & Popping Out
    ========================================================================== */
 
 :root {
-  /* Core Theme Colors */
-  --ivory: #fffdf9;
-  --ivory-warm: #faf5eb;
-  --ivory-card: rgba(255, 255, 255, 0.94);
-  
-  --cherry: #850a1d;             /* Royal Cherry Red for titles & headings */
-  --cherry-deep: #590411;        /* Deep Cherry Wine */
-  --cherry-velvet: #3b030b;      /* Dark velvet cherry for footer & luxury contrast */
-  --cherry-bright: #a8172b;      /* Vibrant Cherry Red for highlights */
-  --cherry-soft: #631320;        /* Subdued Cherry Red for subheadings */
+  /* Rich Cherry Red Theme Colors */
+  --cherry-bg: #6b0c1a;          /* Rich Royal Cherry Red background */
+  --cherry-deep: #40050d;        /* Deep Cherry Velvet */
+  --cherry-dark: #240207;        /* Dark Cherry for footer */
+  --cherry-card: rgba(48, 5, 13, 0.88); /* Translucent Royal Cherry Card */
+  --cherry-card-border: rgba(223, 177, 91, 0.45);
 
-  --gold: #b8860b;               /* Temple Gold */
-  --gold-light: #dfb15b;         /* Bright Metallic Gold */
-  --gold-shimmer: #f3d887;       /* Shimmering Gold */
+  --gold: #dfb15b;               /* Temple Gold */
+  --gold-light: #f5d77f;         /* Bright Metallic Gold */
   --gold-pale: #faeec7;          /* Soft Pale Gold */
-  --gold-border: rgba(184, 134, 11, 0.42);
-  --gold-border-soft: rgba(212, 175, 55, 0.25);
+  --gold-glow: rgba(223, 177, 91, 0.35);
 
-  --text-dark: #2b0409;          /* Deep readable cherry-brown for body text */
-  --text-muted: #5e2832;         /* Secondary body text */
-  --leaf: #4a5d3a;
+  --ivory: #ffffff;              /* Crisp White */
+  --ivory-soft: #fcf6e8;         /* Soft Cream for text */
+  --ivory-muted: #e8d5be;        /* Secondary text */
 
   /* Typography */
   --font-display: 'Cinzel', serif;
@@ -59,8 +54,8 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--ivory);
-  color: var(--text-dark);
+  background-color: var(--cherry-bg);
+  color: var(--ivory);
   font-family: var(--font-body);
   font-weight: 400;
   line-height: 1.6;
@@ -84,7 +79,7 @@ h2,
 h3 {
   margin: 0;
   font-family: var(--font-display);
-  color: var(--cherry);
+  color: var(--gold-light);
 }
 
 /* ---------- Ambient Background Field ---------- */
@@ -93,12 +88,12 @@ h3 {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-color: var(--ivory);
+  background-color: var(--cherry-bg);
   background-image:
-    radial-gradient(circle at 10% 12%, rgba(223, 177, 91, 0.12) 0, transparent 45%),
-    radial-gradient(circle at 90% 18%, rgba(133, 10, 29, 0.06) 0, transparent 40%),
-    radial-gradient(circle at 15% 85%, rgba(223, 177, 91, 0.10) 0, transparent 40%),
-    radial-gradient(circle at 88% 90%, rgba(133, 10, 29, 0.06) 0, transparent 45%);
+    radial-gradient(circle at 10% 15%, rgba(223, 177, 91, 0.18) 0, transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(135, 15, 34, 0.5) 0, transparent 40%),
+    radial-gradient(circle at 15% 85%, rgba(223, 177, 91, 0.15) 0, transparent 40%),
+    radial-gradient(circle at 85% 88%, rgba(135, 15, 34, 0.5) 0, transparent 45%);
 }
 
 /* ==========================================================================
@@ -112,19 +107,12 @@ h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 48px 20px;
+  padding: 50px 20px 60px;
   overflow: hidden;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('page 2.png');
-}
-
-@media (min-width: 768px) {
-  .hero {
-    background-image: url('page 2 landscap.png');
-    background-position: center;
-  }
+  background-color: var(--cherry-bg);
+  background-image: 
+    radial-gradient(ellipse at 50% 20%, rgba(184, 134, 11, 0.15), transparent 70%),
+    linear-gradient(180deg, var(--cherry-deep) 0%, var(--cherry-bg) 50%, var(--cherry-deep) 100%);
 }
 
 .hero-content {
@@ -132,7 +120,7 @@ h3 {
   z-index: 2;
   max-width: 720px;
   margin: 0 auto;
-  padding: 20px 10px;
+  padding: 10px;
 }
 
 .hero-auspicious {
@@ -140,8 +128,8 @@ h3 {
   font-size: clamp(1rem, 2.4vw, 1.3rem);
   font-weight: 600;
   letter-spacing: 0.18em;
-  color: var(--gold);
-  margin: 0 0 16px;
+  color: var(--gold-light);
+  margin: 0 0 14px;
   text-transform: uppercase;
 }
 
@@ -150,23 +138,25 @@ h3 {
   font-size: clamp(0.72rem, 1.8vw, 0.82rem);
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--cherry-soft);
-  margin: 0 0 18px;
+  color: var(--gold-pale);
+  margin: 0 0 14px;
   font-weight: 500;
+  opacity: 0.9;
 }
 
 .couple-names {
-  font-size: clamp(2.5rem, 7.5vw, 4.8rem);
+  font-size: clamp(2.5rem, 7.5vw, 4.6rem);
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: 0.02em;
   margin: 0 0 8px;
-  color: var(--cherry);
-  text-shadow: 0 2px 14px rgba(184, 134, 11, 0.22);
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 25px rgba(223, 177, 91, 0.35);
 }
 
 .couple-names span {
   display: inline-block;
+  color: #ffffff;
 }
 
 .couple-names .amp {
@@ -181,33 +171,67 @@ h3 {
 
 .hero-sub-malayalam {
   font-family: var(--font-malayalam);
-  font-size: clamp(1.15rem, 2.8vw, 1.55rem);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
   font-weight: 700;
-  color: var(--cherry);
+  color: var(--gold-light);
   letter-spacing: 0.15em;
-  margin: 8px 0 12px;
+  margin: 4px 0 16px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Focused First Page Image Showcase (Hero Card) */
+.hero-image-card {
+  max-width: 320px;
+  width: 88%;
+  margin: 14px auto 20px;
+  position: relative;
+  border-radius: 18px;
+  padding: 5px;
+  background: linear-gradient(135deg, #dfb15b, #705018, #dfb15b);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(223, 177, 91, 0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hero-image-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(223, 177, 91, 0.5);
+}
+
+.hero-image-frame {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(223, 177, 91, 0.5);
+  background: #000;
+}
+
+.hero-first-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-invite {
   font-family: var(--font-verse);
   font-size: clamp(1.05rem, 2.2vw, 1.35rem);
   font-style: italic;
-  color: var(--text-muted);
-  margin: 0 0 24px;
+  color: var(--ivory-soft);
+  margin: 12px 0 20px;
 }
 
 .hero-date-badge {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 28px;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1.5px solid var(--gold-border);
+  padding: 10px 26px;
+  background: rgba(48, 5, 13, 0.85);
+  border: 1.5px solid var(--gold);
   border-radius: 40px;
-  box-shadow: 0 8px 24px rgba(133, 10, 29, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   font-family: var(--font-display);
-  font-size: clamp(0.92rem, 2vw, 1.18rem);
-  color: var(--cherry);
+  font-size: clamp(0.92rem, 2vw, 1.15rem);
+  color: var(--gold-light);
   letter-spacing: 0.06em;
   font-weight: 600;
 }
@@ -219,7 +243,7 @@ h3 {
 /* Scroll Cue */
 .scroll-cue {
   position: absolute;
-  bottom: 24px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -235,12 +259,12 @@ h3 {
 .dia svg {
   width: 100%;
   height: 100%;
-  fill: var(--gold);
+  fill: var(--gold-light);
 }
 
 .dia .flame {
-  fill: var(--cherry);
-  opacity: 0.9;
+  fill: #ffb830;
+  opacity: 0.95;
 }
 
 @keyframes bob {
@@ -263,31 +287,40 @@ h3 {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  background-color: var(--cherry-bg);
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .parivar-section,
 .events-section {
-  background-image: url('page 2.png');
+  background-image: 
+    linear-gradient(180deg, rgba(107, 12, 26, 0.92), rgba(64, 5, 13, 0.95)),
+    url('page 2.png');
 }
 
 @media (min-width: 768px) {
   .parivar-section,
   .events-section {
-    background-image: url('page 2 landscap.png');
+    background-image: 
+      linear-gradient(180deg, rgba(107, 12, 26, 0.92), rgba(64, 5, 13, 0.95)),
+      url('page 2 landscap.png');
   }
 }
 
 .countdown-section {
-  background-image: url('page 3.png');
+  background-image: 
+    linear-gradient(180deg, rgba(107, 12, 26, 0.92), rgba(64, 5, 13, 0.95)),
+    url('page 3.png');
 }
 
 @media (min-width: 768px) {
   .countdown-section {
-    background-image: url('page 3 landscap.png');
+    background-image: 
+      linear-gradient(180deg, rgba(107, 12, 26, 0.92), rgba(64, 5, 13, 0.95)),
+      url('page 3 landscap.png');
   }
 }
 
@@ -332,7 +365,7 @@ main section {
   font-size: 0.74rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-light);
   font-weight: 600;
   margin: 0 0 10px;
 }
@@ -341,23 +374,25 @@ main section {
   text-align: center;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 600;
-  color: var(--cherry);
+  color: #ffffff;
   margin-bottom: 6px;
   letter-spacing: 0.02em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
 }
 
 .section-subtitle-malayalam {
   text-align: center;
   font-family: var(--font-malayalam);
   font-size: clamp(1.05rem, 2.2vw, 1.3rem);
-  color: var(--cherry-soft);
+  color: var(--gold-pale);
   font-weight: 700;
   margin: 0 0 44px;
   letter-spacing: 0.05em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================================================================
-   CARDS COMMON (Glass Parchment Aesthetic)
+   CARDS COMMON (Velvet Cherry Glass Aesthetic)
    ========================================================================== */
 .themed-card {
   position: relative;
@@ -370,20 +405,20 @@ main section {
 .event-card {
   text-align: center;
   position: relative;
-  background: var(--ivory-card) !important;
-  border: 1.5px solid var(--gold-border) !important;
+  background: var(--cherry-card) !important;
+  border: 1.5px solid var(--cherry-card-border) !important;
   border-radius: 18px;
-  box-shadow: 0 14px 40px rgba(133, 10, 29, 0.08) !important;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45) !important;
   padding: 38px 24px !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .parivar-card:hover,
 .event-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 48px rgba(133, 10, 29, 0.13) !important;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.55), 0 0 20px rgba(223, 177, 91, 0.25) !important;
 }
 
 /* Inner gold hairline frame */
@@ -392,7 +427,7 @@ main section {
   content: '';
   position: absolute;
   inset: 7px;
-  border: 1px solid var(--gold-border-soft);
+  border: 1px solid rgba(223, 177, 91, 0.25);
   border-radius: 13px;
   pointer-events: none;
 }
@@ -406,14 +441,14 @@ main section {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(223, 177, 91, 0.14);
-  border: 1px solid rgba(184, 134, 11, 0.35);
-  color: var(--cherry);
+  background: rgba(223, 177, 91, 0.16);
+  border: 1px solid rgba(223, 177, 91, 0.4);
+  color: var(--gold-light);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  padding: 5px 16px;
+  padding: 6px 18px;
   border-radius: 20px;
   margin-bottom: 16px;
 }
@@ -468,20 +503,21 @@ main section {
 .parivar-name {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3.2vw, 2.1rem);
-  color: var(--cherry);
+  color: var(--gold-light);
   font-weight: 600;
   margin-bottom: 16px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .parivar-line {
   font-size: 0.94rem;
-  color: var(--text-muted);
+  color: var(--ivory-soft);
   margin: 0 0 16px;
   line-height: 1.75;
 }
 
 .parivar-line strong {
-  color: var(--text-dark);
+  color: #ffffff;
   font-weight: 600;
   font-size: 1.05rem;
   display: inline-block;
@@ -490,7 +526,7 @@ main section {
 
 .parivar-address {
   font-size: 0.88rem;
-  color: var(--text-muted);
+  color: var(--ivory-muted);
   margin: 18px 0 20px;
   display: flex;
   align-items: center;
@@ -500,7 +536,7 @@ main section {
 }
 
 .parivar-address i {
-  color: var(--gold);
+  color: var(--gold-light);
   font-size: 0.95rem;
 }
 
@@ -508,26 +544,27 @@ main section {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: #ffffff !important;
-  background: linear-gradient(135deg, var(--cherry), var(--cherry-deep));
-  font-weight: 600;
+  color: #35040b !important;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  font-weight: 700;
   font-size: 0.88rem;
   letter-spacing: 0.04em;
   padding: 10px 22px;
   border-radius: 30px;
-  border: 1.5px solid var(--gold-light);
-  box-shadow: 0 4px 16px rgba(133, 10, 29, 0.22);
+  border: 1px solid var(--gold);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
   transition: all 0.25s ease;
 }
 
 .contact-link:hover {
-  background: linear-gradient(135deg, var(--cherry-bright), var(--cherry));
+  background: #ffffff;
+  color: #35040b !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(133, 10, 29, 0.32);
+  box-shadow: 0 6px 22px rgba(223, 177, 91, 0.4);
 }
 
 .contact-link i {
-  color: var(--gold-pale);
+  color: #660815;
 }
 
 /* ==========================================================================
@@ -537,7 +574,7 @@ main section {
   text-align: center;
   font-family: var(--font-verse);
   font-style: italic;
-  color: var(--text-muted);
+  color: var(--gold-pale);
   margin: -30px 0 44px;
   font-size: clamp(1rem, 2.2vw, 1.25rem);
 }
@@ -559,27 +596,28 @@ main section {
 }
 
 .countdown-box {
-  background: var(--ivory-card);
-  border: 1.5px solid var(--gold-border);
+  background: var(--cherry-card);
+  border: 1.5px solid var(--cherry-card-border);
   border-radius: 16px;
   padding: 22px 10px;
   position: relative;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(133, 10, 29, 0.08);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: transform 0.25s ease;
 }
 
 .countdown-box:hover {
   transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(223, 177, 91, 0.25);
 }
 
 .countdown-box::before {
   content: '';
   position: absolute;
   inset: 5px;
-  border: 1px solid var(--gold-border-soft);
+  border: 1px solid rgba(223, 177, 91, 0.25);
   border-radius: 12px;
   pointer-events: none;
 }
@@ -587,11 +625,12 @@ main section {
 .countdown-number {
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(1.9rem, 5.2vw, 2.7rem);
-  color: var(--cherry);
+  font-size: clamp(2rem, 5.2vw, 2.8rem);
+  color: var(--gold-light);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   line-height: 1.1;
+  text-shadow: 0 2px 14px rgba(223, 177, 91, 0.3);
 }
 
 .countdown-label {
@@ -599,7 +638,7 @@ main section {
   font-size: 0.68rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #ffffff;
   font-weight: 600;
   margin-top: 8px;
 }
@@ -627,27 +666,27 @@ main section {
   margin: 0 auto 16px;
   border-radius: 50%;
   border: 1.5px solid var(--gold-light);
-  background: rgba(223, 177, 91, 0.12);
+  background: rgba(223, 177, 91, 0.16);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--cherry);
+  color: var(--gold-light);
   font-size: 1.35rem;
-  box-shadow: 0 4px 14px rgba(184, 134, 11, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
 .event-kicker {
   font-size: 0.7rem;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-pale);
   font-weight: 600;
   margin: 0 0 6px;
 }
 
 .event-title {
   font-size: clamp(1.35rem, 2.6vw, 1.65rem);
-  color: var(--cherry);
+  color: var(--gold-light);
   font-weight: 600;
   margin-bottom: 4px;
 }
@@ -655,7 +694,7 @@ main section {
 .event-malayalam {
   font-family: var(--font-malayalam);
   font-size: 1.05rem;
-  color: var(--cherry-soft);
+  color: var(--gold-pale);
   font-weight: 700;
   margin: 0 0 16px;
   letter-spacing: 0.04em;
@@ -663,7 +702,7 @@ main section {
 
 .event-date {
   font-size: 0.94rem;
-  color: var(--text-dark);
+  color: #ffffff;
   font-weight: 500;
   margin: 0 0 10px;
 }
@@ -672,9 +711,9 @@ main section {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(223, 177, 91, 0.16);
-  border: 1px solid rgba(184, 134, 11, 0.38);
-  color: var(--cherry);
+  background: rgba(223, 177, 91, 0.18);
+  border: 1px solid rgba(223, 177, 91, 0.45);
+  color: var(--gold-light);
   font-size: 0.88rem;
   font-weight: 600;
   padding: 6px 18px;
@@ -683,18 +722,18 @@ main section {
 }
 
 .time-pill i {
-  color: var(--gold);
+  color: var(--gold-light);
 }
 
 .event-venue {
   font-size: 0.96rem;
-  color: var(--text-dark);
+  color: var(--ivory-soft);
   margin: 0 0 24px;
   line-height: 1.6;
 }
 
 .event-venue strong {
-  color: var(--cherry);
+  color: #ffffff;
   font-size: 1.08rem;
 }
 
@@ -712,23 +751,24 @@ main section {
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-weight: 600;
-  color: #ffffff !important;
-  background: linear-gradient(135deg, var(--cherry), var(--cherry-deep));
-  border: 1.5px solid var(--gold-light);
+  font-weight: 700;
+  color: #35040b !important;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  border: 1px solid var(--gold);
   border-radius: 30px;
-  box-shadow: 0 6px 20px rgba(133, 10, 29, 0.22);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
   transition: all 0.25s ease;
 }
 
 .btn-map:hover {
-  background: linear-gradient(135deg, var(--cherry-bright), var(--cherry));
+  background: #ffffff;
+  color: #35040b !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(133, 10, 29, 0.35);
+  box-shadow: 0 8px 26px rgba(223, 177, 91, 0.5);
 }
 
 .btn-map i {
-  color: var(--gold-pale);
+  color: #660815;
 }
 
 /* ==========================================================================
@@ -737,9 +777,9 @@ main section {
 .ashirwad {
   text-align: center;
   padding: var(--section-pad) 24px calc(var(--section-pad) + 30px);
-  background: linear-gradient(180deg, #4d0612 0%, #29030a 100%);
+  background: var(--cherry-dark);
   color: var(--ivory);
-  border-top: 2px solid var(--gold-light);
+  border-top: 2px solid var(--gold);
   position: relative;
   z-index: 10;
 }
@@ -786,7 +826,7 @@ main section {
   color: var(--gold-light);
   letter-spacing: 0.04em;
   margin: 0 0 28px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .footer-contact {
@@ -803,8 +843,8 @@ main section {
   color: #faeedd;
   letter-spacing: 0.04em;
   font-weight: 500;
-  background: rgba(223, 177, 91, 0.1);
-  border: 1px solid rgba(223, 177, 91, 0.22);
+  background: rgba(223, 177, 91, 0.12);
+  border: 1px solid rgba(223, 177, 91, 0.28);
   border-radius: 30px;
   padding: 8px 24px;
   display: inline-block;
@@ -821,21 +861,21 @@ main section {
   height: 54px;
   border-radius: 50%;
   border: 1.5px solid var(--gold-light);
-  background: linear-gradient(135deg, var(--cherry), var(--cherry-deep));
-  color: var(--gold-pale);
+  background: linear-gradient(135deg, #871023, #480610);
+  color: var(--gold-light);
   font-size: 1.15rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 50;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .audio-toggle:hover {
   transform: scale(1.08);
-  box-shadow: 0 8px 26px rgba(133, 10, 29, 0.4);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.6);
 }
 
 .audio-toggle.playing i {
@@ -858,7 +898,7 @@ main section {
 }
 
 /* ==========================================================================
-   INVITATION COVER (OVERLAY)
+   INVITATION COVER (OVERLAY) - FOCUSED FIRST PAGE IMAGE POPPING OUT
    ========================================================================== */
 .invitation-cover {
   position: fixed;
@@ -867,9 +907,9 @@ main section {
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: rgba(18, 2, 5, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(42, 4, 10, 0.82);
   padding: 20px;
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
@@ -881,13 +921,15 @@ main section {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.75), 0 0 35px rgba(223, 177, 91, 0.4);
   border: 2px solid var(--gold-light);
+  outline: 4px solid rgba(223, 177, 91, 0.25);
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #000;
+  transition: transform 0.3s ease;
 }
 
 .cover-img {
@@ -908,7 +950,7 @@ main section {
 }
 
 .btn-open-invitation {
-  background: linear-gradient(135deg, var(--cherry), var(--cherry-deep));
+  background: linear-gradient(135deg, #9e122b, #6b0717);
   color: #ffffff;
   border: 1.5px solid var(--gold-light);
   border-radius: 30px;
