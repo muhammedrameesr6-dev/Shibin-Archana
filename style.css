@@ -23,7 +23,7 @@
   --font-body: 'Montserrat', sans-serif;
 
   --max-w: 1080px;
-  --section-pad: clamp(64px, 10vw, 120px);
+  --section-pad: clamp(48px, 7vw, 100px);
 }
 
 * {
@@ -97,14 +97,15 @@ h3 {
 .hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 32px 20px;
+  padding: 40px 16px 50px;
   overflow: hidden;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--cherry-bg);
@@ -118,7 +119,9 @@ h3 {
   position: relative;
   z-index: 1;
   max-width: 640px;
-  transform: translateY(-90px);
+  width: 100%;
+  margin: auto 0;
+  transform: translateY(-15px);
 }
 
 .mobile-only {
@@ -127,17 +130,14 @@ h3 {
 
 @media (min-width: 768px) {
   .hero {
+    background-position: center;
     background-image: 
       linear-gradient(180deg, rgba(107, 12, 26, 0.82), rgba(64, 5, 13, 0.92)),
       url('landscap.png');
   }
 
-  .couple-names {
-    white-space: nowrap;
-  }
-
   .hero-content {
-    transform: translateY(-150px);
+    transform: translateY(-40px);
   }
 
   .mobile-only {
@@ -162,21 +162,22 @@ h3 {
 
 .eyebrow {
   font-family: var(--font-body);
-  font-size: 0.72rem;
-  letter-spacing: 0.32em;
+  font-size: clamp(0.65rem, 1.8vw, 0.74rem);
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--maroon-soft);
-  margin: 0 0 18px;
+  margin: 0 0 14px;
 }
 
 .couple-names {
-  font-size: clamp(3rem, 10vw, 5.4rem);
+  font-size: clamp(2.1rem, 8vw, 4.2rem);
   font-weight: 600;
-  line-height: 1.05;
+  line-height: 1.1;
   letter-spacing: 0.01em;
   margin-bottom: 6px;
   color: #ffffff;
   text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  word-break: normal;
 }
 
 .couple-names span {
@@ -550,7 +551,7 @@ main section {
   border: 1px solid rgba(223, 177, 91, 0.45) !important;
   border-radius: 16px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45) !important;
-  padding: 36px 24px !important;
+  padding: 30px 18px !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -643,44 +644,54 @@ main section {
 
 .countdown-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  max-width: 420px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  max-width: 440px;
   margin: 0 auto;
+}
+
+@media (max-width: 380px) {
+  .countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
 
 .countdown-box {
   border: 1px solid rgba(223, 177, 91, 0.5);
-  padding: 20px 8px;
+  padding: 14px 6px;
   position: relative;
   background: var(--cherry-card);
   backdrop-filter: blur(8px);
+  border-radius: 12px;
 }
 
 .countdown-box::before {
   content: '';
   position: absolute;
-  inset: 5px;
+  inset: 4px;
   border: 1px solid rgba(223, 177, 91, 0.25);
+  border-radius: 8px;
   pointer-events: none;
 }
 
 .countdown-number {
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(1.7rem, 5vw, 2.6rem);
+  font-size: clamp(1.4rem, 4.8vw, 2.5rem);
   color: var(--maroon);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
+  line-height: 1.1;
 }
 
 .countdown-label {
   display: block;
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
+  font-size: clamp(0.55rem, 1.8vw, 0.65rem);
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 /* ==========================================================================
@@ -745,12 +756,15 @@ main section {
 .btn-directions {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 10px 24px;
-  font-size: 0.78rem;
+  padding: 12px 24px;
+  font-size: 0.8rem;
   letter-spacing: 0.08em;
   border: 1px solid var(--gold);
   border-radius: 30px;
+  min-height: 44px;
+  touch-action: manipulation;
   transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
@@ -912,6 +926,17 @@ main section {
   z-index: 50;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
   transition: transform 0.25s ease;
+  touch-action: manipulation;
+}
+
+@media (max-width: 600px) {
+  .audio-toggle {
+    bottom: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+  }
 }
 
 .audio-toggle:hover {
@@ -1002,13 +1027,13 @@ main section {
 }
 
 .cover-card {
-  max-width: 380px;
-  max-height: 86vh;
+  max-width: min(350px, 88vw);
+  max-height: 82vh;
   width: 100%;
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
   border: 1.5px solid rgba(212, 175, 55, 0.5); /* gold border */
   box-sizing: border-box;
   display: flex;
@@ -1019,14 +1044,14 @@ main section {
 .cover-img {
   width: 100%;
   height: 100%;
-  max-height: 86vh;
+  max-height: 82vh;
   object-fit: cover;
   display: block;
 }
 
 .cover-card .btn-open-invitation {
   position: absolute;
-  bottom: 24px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -1038,18 +1063,19 @@ main section {
   color: var(--maroon-deep);
   border: 1px solid var(--gold);
   border-radius: 30px;
-  padding: 14px 32px;
+  padding: 12px 28px;
   font-family: var(--font-body);
-  font-size: 0.8rem;
-  letter-spacing: 0.15em;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   box-shadow: 0 8px 24px rgba(184, 134, 11, 0.25);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  touch-action: manipulation;
 }
 
 .btn-open-invitation:hover {
@@ -1120,15 +1146,18 @@ main section {
 .contact-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  margin-top: 10px;
+  margin-top: 12px;
   color: var(--gold-light);
   font-weight: 500;
   font-size: 0.85rem;
-  padding: 6px 16px;
+  padding: 8px 20px;
+  min-height: 40px;
   background: rgba(223, 177, 91, 0.15);
   border-radius: 20px;
   border: 1px solid rgba(223, 177, 91, 0.35);
+  touch-action: manipulation;
   transition: all 0.2s ease;
 }
 
