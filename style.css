@@ -971,19 +971,25 @@ main section {
 }
 
 .cover-card {
-  max-width: 440px;
+  max-width: 380px;
+  max-height: 86vh;
   width: 100%;
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(92, 6, 18, 0.15);
-  border: 1px solid rgba(184, 134, 11, 0.3); /* gold border */
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  border: 1.5px solid rgba(212, 175, 55, 0.5); /* gold border */
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cover-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-height: 86vh;
+  object-fit: cover;
   display: block;
 }
 
