@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 260" fill="none" class="kerala-vilakku-svg">
+  <defs>
+    <!-- Metallic Gold Gradients -->
+    <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b37d14"/>
+      <stop offset="25%" stop-color="#f7d358"/>
+      <stop offset="50%" stop-color="#fff4b8"/>
+      <stop offset="75%" stop-color="#e5b22d"/>
+      <stop offset="100%" stop-color="#8a5c0b"/>
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fae27c"/>
+      <stop offset="50%" stop-color="#c99218"/>
+      <stop offset="100%" stop-color="#734905"/>
+    </linearGradient>
+    <radialGradient id="flameGrad" cx="50%" cy="80%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#ffe600"/>
+      <stop offset="60%" stop-color="#ff7700"/>
+      <stop offset="100%" stop-color="#ff1a00" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="flameGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Crown Finial / Mayil / Kumbil -->
+  <path d="M80 32 C78 24 74 15 80 8 C86 15 82 24 80 32 Z" fill="url(#goldGrad1)"/>
+  <ellipse cx="80" cy="33" rx="4" ry="2" fill="url(#goldGrad2)"/>
+  <circle cx="80" cy="18" r="3" fill="#ffe680"/>
+
+  <!-- Top Spire / Finial Base -->
+  <path d="M76 34 L84 34 L82 46 L78 46 Z" fill="url(#goldGrad1)"/>
+  <ellipse cx="80" cy="46" rx="7" ry="2.5" fill="url(#goldGrad2)"/>
+
+  <!-- Upper Oil Plate (തട്ട്) -->
+  <path d="M60 52 C60 50 100 50 100 52 L95 58 C92 62 68 62 65 58 Z" fill="url(#goldGrad1)"/>
+  <ellipse cx="80" cy="52" rx="20" ry="4" fill="url(#goldGrad2)"/>
+
+  <!-- Main Oil Thattu (Large Oil Reservoir with Wicks) -->
+  <g class="vilakku-plate">
+    <ellipse cx="80" cy="85" rx="46" ry="11" fill="url(#goldGrad2)"/>
+    <ellipse cx="80" cy="83" rx="42" ry="9" fill="#5c3804"/>
+    <ellipse cx="80" cy="83" rx="39" ry="7" fill="url(#goldGrad1)"/>
+    <!-- Wick spouts -->
+    <path d="M34 85 Q30 84 32 82 Q38 83 40 85 Z" fill="url(#goldGrad1)"/>
+    <path d="M126 85 Q130 84 128 82 Q122 83 120 85 Z" fill="url(#goldGrad1)"/>
+    <path d="M80 92 Q80 96 82 94 Q82 90 80 92 Z" fill="url(#goldGrad1)"/>
+    <!-- Plate under-bowl -->
+    <path d="M36 85 C40 102 120 102 124 85 C116 108 44 108 36 85 Z" fill="url(#goldGrad1)"/>
+    <ellipse cx="80" cy="100" rx="26" ry="5" fill="url(#goldGrad2)"/>
+  </g>
+
+  <!-- Central Stem Column (സ്തംഭം) with ornate turned moldings -->
+  <g class="vilakku-stem">
+    <path d="M74 102 L86 102 L84 116 L76 116 Z" fill="url(#goldGrad1)"/>
+    <ellipse cx="80" cy="116" rx="10" ry="3" fill="url(#goldGrad2)"/>
+    
+    <!-- Middle Baluster Bead (മണി) -->
+    <ellipse cx="80" cy="130" rx="14" ry="10" fill="url(#goldGrad1)"/>
+    <ellipse cx="80" cy="130" rx="15" ry="3" fill="url(#goldGrad2)"/>
+    
+    <path d="M75 140 L85 140 L83 162 L77 162 Z" fill="url(#goldGrad1)"/>
+    <ellipse cx="80" cy="162" rx="12" ry="3" fill="url(#goldGrad2)"/>
+    
+    <!-- Lower Baluster Bead -->
+    <ellipse cx="80" cy="176" rx="18" ry="11" fill="url(#goldGrad1)"/>
+    <ellipse cx="80" cy="176" rx="19" ry="3.5" fill="url(#goldGrad2)"/>
+    
+    <!-- Column Flaring downwards -->
+    <path d="M72 186 C72 186 64 205 60 212 L100 212 C96 205 88 186 88 186 Z" fill="url(#goldGrad1)"/>
+    <ellipse cx="80" cy="212" rx="22" ry="4.5" fill="url(#goldGrad2)"/>
+  </g>
+
+  <!-- Pedestal Base (പീഠം) with Tiered Rings -->
+  <g class="vilakku-base">
+    <ellipse cx="80" cy="220" rx="36" ry="7" fill="url(#goldGrad1)"/>
+    <ellipse cx="80" cy="220" rx="36" ry="6" fill="url(#goldGrad2)"/>
+    
+    <path d="M44 220 L30 236 L130 236 L116 220 Z" fill="url(#goldGrad1)"/>
+    <ellipse cx="80" cy="236" rx="52" ry="9" fill="url(#goldGrad2)"/>
+
+    <path d="M28 236 L20 248 L140 248 L132 236 Z" fill="url(#goldGrad1)"/>
+    <ellipse cx="80" cy="248" rx="60" ry="10" fill="url(#goldGrad1)"/>
+
+    <!-- Base rim detailing -->
+    <ellipse cx="80" cy="252" rx="60" ry="6" fill="#523203"/>
+    <ellipse cx="80" cy="250" rx="58" ry="7" fill="url(#goldGrad2)"/>
+  </g>
+
+  <!-- Animated Flickering Flames (തിരിനാളം) -->
+  <!-- Center Main Flame -->
+  <g class="vilakku-flame center-flame" filter="url(#flameGlow)">
+    <path d="M80 82 C74 76 72 65 80 54 C88 65 86 76 80 82 Z" fill="url(#flameGrad)"/>
+    <ellipse cx="80" cy="74" rx="3" ry="5" fill="#ffffff" opacity="0.9"/>
+  </g>
+  <!-- Left Flame -->
+  <g class="vilakku-flame left-flame" filter="url(#flameGlow)">
+    <path d="M34 83 C29 78 28 70 34 62 C40 70 39 78 34 83 Z" fill="url(#flameGrad)"/>
+    <ellipse cx="34" cy="76" rx="2" ry="3.5" fill="#ffffff" opacity="0.85"/>
+  </g>
+  <!-- Right Flame -->
+  <g class="vilakku-flame right-flame" filter="url(#flameGlow)">
+    <path d="M126 83 C121 78 120 70 126 62 C132 70 131 78 126 83 Z" fill="url(#flameGrad)"/>
+    <ellipse cx="126" cy="76" rx="2" ry="3.5" fill="#ffffff" opacity="0.85"/>
+  </g>
+  <!-- Top Finial Flame -->
+  <g class="vilakku-flame top-flame" filter="url(#flameGlow)">
+    <path d="M80 50 C76 45 75 38 80 30 C85 38 84 45 80 50 Z" fill="url(#flameGrad)"/>
+    <ellipse cx="80" cy="43" rx="1.8" ry="3" fill="#ffffff" opacity="0.85"/>
+  </g>
+</svg>

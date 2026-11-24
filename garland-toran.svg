@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" fill="none" class="kerala-garland-svg" preserveAspectRatio="none">
+  <defs>
+    <!-- Marigold Orange Radial -->
+    <radialGradient id="marigoldOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff066"/>
+      <stop offset="35%" stop-color="#ff9900"/>
+      <stop offset="85%" stop-color="#e64a00"/>
+      <stop offset="100%" stop-color="#992200"/>
+    </radialGradient>
+    <!-- Marigold Yellow Radial -->
+    <radialGradient id="marigoldYellow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#ffdd00"/>
+      <stop offset="85%" stop-color="#f5a623"/>
+      <stop offset="100%" stop-color="#d47500"/>
+    </radialGradient>
+    <!-- Jasmine White Radial -->
+    <radialGradient id="jasmineWhite" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#f2ebd9"/>
+      <stop offset="100%" stop-color="#cfc2a3"/>
+    </radialGradient>
+    <!-- Gold Bead Gradient -->
+    <linearGradient id="toranGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff4b8"/>
+      <stop offset="50%" stop-color="#e5b22d"/>
+      <stop offset="100%" stop-color="#8a5c0b"/>
+    </linearGradient>
+    <!-- Mango Leaf Green -->
+    <linearGradient id="mangoLeaf" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4d8b31"/>
+      <stop offset="50%" stop-color="#2d5e1e"/>
+      <stop offset="100%" stop-color="#18380e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Hanging Swag Cords (Golden Thread) -->
+  <path d="M0 10 Q 150 70 300 10 Q 450 70 600 10 Q 750 70 900 10 Q 1050 70 1200 10" stroke="url(#toranGold)" stroke-width="3" fill="none"/>
+  <path d="M0 14 Q 150 74 300 14 Q 450 74 600 14 Q 750 74 900 14 Q 1050 74 1200 14" stroke="#e5b22d" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+
+  <!-- Top Border Bar (Kasavu Gold Ribbon with Mango Leaves) -->
+  <rect x="0" y="0" width="1200" height="8" fill="url(#toranGold)"/>
+
+  <!-- Repeating Floral Clusters & Mango Leaves at Swag Peaks & Troughs -->
+  <!-- 0, 150, 300, 450, 600, 750, 900, 1050, 1200 -->
+
+  <!-- Hanging Floral Drops -->
+  <!-- Peak 0 -->
+  <g transform="translate(0, 10)">
+    <circle cx="0" cy="0" r="14" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="18" r="10" fill="url(#marigoldYellow)"/>
+    <circle cx="0" cy="32" r="8" fill="url(#jasmineWhite)"/>
+    <circle cx="0" cy="44" r="5" fill="url(#toranGold)"/>
+  </g>
+
+  <!-- Trough 150 (Hanging Low) -->
+  <g transform="translate(150, 52)">
+    <!-- Mango leaves -->
+    <path d="M-12 -10 C -25 15 -18 35 0 45 C 18 35 25 15 12 -10 Z" fill="url(#mangoLeaf)"/>
+    <circle cx="0" cy="0" r="18" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="18" r="14" fill="url(#marigoldYellow)"/>
+    <circle cx="0" cy="36" r="11" fill="url(#jasmineWhite)"/>
+    <circle cx="0" cy="50" r="8" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="62" r="5" fill="url(#toranGold)"/>
+  </g>
+
+  <!-- Peak 300 -->
+  <g transform="translate(300, 10)">
+    <path d="M-10 -5 C -18 12 -12 25 0 32 C 12 25 18 12 10 -5 Z" fill="url(#mangoLeaf)"/>
+    <circle cx="0" cy="0" r="15" fill="url(#marigoldYellow)"/>
+    <circle cx="0" cy="18" r="11" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="32" r="8" fill="url(#jasmineWhite)"/>
+    <circle cx="0" cy="44" r="5" fill="url(#toranGold)"/>
+  </g>
+
+  <!-- Trough 450 -->
+  <g transform="translate(450, 52)">
+    <path d="M-12 -10 C -25 15 -18 35 0 45 C 18 35 25 15 12 -10 Z" fill="url(#mangoLeaf)"/>
+    <circle cx="0" cy="0" r="18" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="18" r="14" fill="url(#marigoldYellow)"/>
+    <circle cx="0" cy="36" r="11" fill="url(#jasmineWhite)"/>
+    <circle cx="0" cy="50" r="8" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="62" r="5" fill="url(#toranGold)"/>
+  </g>
+
+  <!-- Peak 600 (Center Main Swag) -->
+  <g transform="translate(600, 10)">
+    <path d="M-12 -5 C -22 15 -15 30 0 38 C 15 30 22 15 12 -5 Z" fill="url(#mangoLeaf)"/>
+    <circle cx="0" cy="0" r="17" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="18" r="13" fill="url(#marigoldYellow)"/>
+    <circle cx="0" cy="34" r="10" fill="url(#jasmineWhite)"/>
+    <circle cx="0" cy="48" r="6" fill="url(#toranGold)"/>
+  </g>
+
+  <!-- Trough 750 -->
+  <g transform="translate(750, 52)">
+    <path d="M-12 -10 C -25 15 -18 35 0 45 C 18 35 25 15 12 -10 Z" fill="url(#mangoLeaf)"/>
+    <circle cx="0" cy="0" r="18" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="18" r="14" fill="url(#marigoldYellow)"/>
+    <circle cx="0" cy="36" r="11" fill="url(#jasmineWhite)"/>
+    <circle cx="0" cy="50" r="8" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="62" r="5" fill="url(#toranGold)"/>
+  </g>
+
+  <!-- Peak 900 -->
+  <g transform="translate(900, 10)">
+    <path d="M-10 -5 C -18 12 -12 25 0 32 C 12 25 18 12 10 -5 Z" fill="url(#mangoLeaf)"/>
+    <circle cx="0" cy="0" r="15" fill="url(#marigoldYellow)"/>
+    <circle cx="0" cy="18" r="11" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="32" r="8" fill="url(#jasmineWhite)"/>
+    <circle cx="0" cy="44" r="5" fill="url(#toranGold)"/>
+  </g>
+
+  <!-- Trough 1050 -->
+  <g transform="translate(1050, 52)">
+    <path d="M-12 -10 C -25 15 -18 35 0 45 C 18 35 25 15 12 -10 Z" fill="url(#mangoLeaf)"/>
+    <circle cx="0" cy="0" r="18" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="18" r="14" fill="url(#marigoldYellow)"/>
+    <circle cx="0" cy="36" r="11" fill="url(#jasmineWhite)"/>
+    <circle cx="0" cy="50" r="8" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="62" r="5" fill="url(#toranGold)"/>
+  </g>
+
+  <!-- Peak 1200 -->
+  <g transform="translate(1200, 10)">
+    <circle cx="0" cy="0" r="14" fill="url(#marigoldOrange)"/>
+    <circle cx="0" cy="18" r="10" fill="url(#marigoldYellow)"/>
+    <circle cx="0" cy="32" r="8" fill="url(#jasmineWhite)"/>
+    <circle cx="0" cy="44" r="5" fill="url(#toranGold)"/>
+  </g>
+
+  <!-- Small Jasmine & Gold Bead Spacers along the swag curve -->
+  <g fill="url(#jasmineWhite)">
+    <circle cx="75" cy="32" r="6"/>
+    <circle cx="225" cy="32" r="6"/>
+    <circle cx="375" cy="32" r="6"/>
+    <circle cx="525" cy="32" r="6"/>
+    <circle cx="675" cy="32" r="6"/>
+    <circle cx="825" cy="32" r="6"/>
+    <circle cx="975" cy="32" r="6"/>
+    <circle cx="1125" cy="32" r="6"/>
+  </g>
+</svg>

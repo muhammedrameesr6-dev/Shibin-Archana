@@ -15,7 +15,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -23,14 +23,14 @@
 <!-- Favicon -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪔</text></svg>">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
 <!-- ============ INVITATION COVER (OVERLAY) ============ -->
 <div class="invitation-cover" id="invitationCover">
   <div class="cover-card">
-    <img src="first-page.jpg" alt="ഗുരുവായൂരമ്പല നടയിൽ - Shibin &amp; Archana" class="cover-img">
+    <img src="first-page.jpg" alt="Shibin &amp; Archana Wedding Invitation" class="cover-img">
     <button class="btn-open-invitation" id="btnOpenInvitation">
       <i class="fa-solid fa-envelope-open"></i> OPEN INVITATION
     </button>
@@ -40,17 +40,33 @@
 <!-- Ambient rangoli dot field -->
 <div class="ambient-field" aria-hidden="true"></div>
 
+<!-- Traditional Kerala Floral Garland (Toran) -->
+<div class="kerala-toran" aria-hidden="true">
+  <img src="garland-toran.svg" alt="Kerala Traditional Flower Garland Toran" class="toran-img">
+</div>
+
 <!-- ============ HERO ============ -->
 <header class="hero" id="hero">
   <div class="hero-content"> 
-    <p class="eyebrow" data-reveal>Together with<br class="mobile-only"> their families</p>
+    <div class="traditional-lamps" aria-hidden="true" data-reveal>
+      <img src="nilavilakku.svg" alt="Traditional Nilavilakku" class="hero-lamp lamp-left">
+      <div class="sacred-crest">
+        <span class="om-symbol">ॐ</span>
+        <span class="malayalam-kicker">Guruvayoor Temple Sacred Vows</span>
+      </div>
+      <img src="nilavilakku.svg" alt="Traditional Nilavilakku" class="hero-lamp lamp-right">
+    </div>
+    <p class="eyebrow" data-reveal>Together with their families</p>
     <h1 class="couple-names" data-reveal>
       <span>Shibin</span>
-      <span class="amp">&amp;</span><br class="mobile-only">
+      <span class="amp">&amp;</span>
       <span>Archana</span>
     </h1>
     <p class="hero-invite" data-reveal>cordially invite you to celebrate their wedding</p>
-    <p class="hero-date" data-reveal>Sunday, 10th January 2027</p>
+    <div class="hero-date-badge" data-reveal>
+      <i class="fa-solid fa-calendar-day"></i>
+      <span>Sunday, 10th January 2027</span>
+    </div>
   </div>
 </header>
 
@@ -59,32 +75,47 @@
   <!-- ============ PARIVAR ============ -->
   <section class="parivar-section" id="parivar">
     <div class="page-divider"><img src="flower-divider.png" alt="Flower Divider"></div>
+    
+    <!-- Traditional Valkannadi Emblem -->
+    <div class="valkannadi-emblem" data-reveal>
+      <img src="valkannadi.svg" alt="Traditional Kerala Valkannadi" class="valkannadi-img">
+      <span class="ashtamangalyam-badge">Sacred Traditions &amp; Blessings</span>
+    </div>
+
     <p class="section-eyebrow" data-reveal>The Parivar</p>
     <h2 class="section-title" data-reveal>With the Blessings Of</h2>
 
     <div class="parivar-grid">
       <article class="themed-card parivar-card groom-card" data-reveal-stagger>
+        <div class="card-ornament top-left"></div>
+        <div class="card-ornament top-right"></div>
         <div class="card-content">
-          <p class="parivar-kicker">The Groom</p>
+          <p class="parivar-kicker"><i class="fa-solid fa-crown"></i> The Groom</p>
           <h3 class="parivar-name">Shibin T.S.</h3>
           <p class="parivar-line">Beloved son of<br><strong>Mr. Sreenivasan &amp;<br> Mrs. Sheela Sreenivasan</strong></p>
           <p class="parivar-address"><i class="fa-solid fa-location-dot"></i> Thanik(k)al House, Kallurima, Mannam</p>
           <a href="tel:+918086505586" class="contact-link"><i class="fa-solid fa-phone"></i> +91 80865 05586</a>
         </div>
+        <div class="card-ornament btm-left"></div>
+        <div class="card-ornament btm-right"></div>
       </article>
 
       <div class="parivar-divider" aria-hidden="true">
-        <svg viewBox="0 0 40 200"><line x1="20" y1="0" x2="20" y2="200"/><circle cx="20" cy="100" r="5"/></svg>
+        <img src="valkannadi.svg" alt="Valkannadi" class="parivar-valkannadi-center">
       </div>
 
       <article class="themed-card parivar-card bride-card" data-reveal-stagger>
+        <div class="card-ornament top-left"></div>
+        <div class="card-ornament top-right"></div>
         <div class="card-content">
-          <p class="parivar-kicker">The Bride</p>
+          <p class="parivar-kicker"><i class="fa-solid fa-gem"></i> The Bride</p>
           <h3 class="parivar-name">Archana</h3>
           <p class="parivar-line">Beloved daughter of<br><strong>Mr. Prakashan &amp;<br> Mrs. Sajitha Prakashan</strong></p>
           <p class="parivar-address"><i class="fa-solid fa-location-dot"></i> Variyath Valappil, Muthoor, Vattamkulam</p>
           <a href="tel:+918086086424" class="contact-link"><i class="fa-solid fa-phone"></i> +91 80860 86424</a>
         </div>
+        <div class="card-ornament btm-left"></div>
+        <div class="card-ornament btm-right"></div>
       </article>
     </div>
   </section>
@@ -119,19 +150,28 @@
   <!-- ============ VIVAH UTSAV ============ -->
   <section class="events-section" id="events">
     <div class="page-divider"><img src="flower-divider.png" alt="Flower Divider"></div>
-    <p class="section-eyebrow" data-reveal>Vivah Utsav</p>
+    <p class="section-eyebrow" data-reveal>Vivah Utsav · Wedding Celebrations</p>
     <h2 class="section-title" data-reveal>Join Us In Celebration</h2>
 
     <div class="events-grid">
       <!-- Ceremony (Thalikettu) -->
-      <article class="themed-card event-card" data-reveal-stagger>
+      <article class="themed-card event-card ceremony-card" data-reveal-stagger>
+        <div class="card-ornament top-left"></div>
+        <div class="card-ornament top-right"></div>
         <div class="card-content">
-          <div class="event-icon"><i class="fa-solid fa-om"></i></div>
-          <p class="event-kicker">Muhurtham &amp; Thalikettu</p>
+          <div class="event-icon-wrapper">
+            <img src="nilavilakku.svg" alt="Traditional Nilavilakku" class="event-vilakku-icon">
+          </div>
+          <p class="event-kicker"><i class="fa-solid fa-om"></i> Muhurtham &amp; Thalikettu</p>
           <h3 class="event-title">Wedding Ceremony</h3>
-          <p class="event-date">Sunday, 10th January 2027</p>
-          <p class="event-time">8:00 AM – 8:30 AM</p>
-          <p class="event-venue">Guruvayoor Temple<br>Guruvayoor, Kerala</p>
+          <div class="event-time-badge">
+            <i class="fa-regular fa-clock"></i> 8:00 AM – 8:30 AM IST
+          </div>
+          <p class="event-date"><i class="fa-regular fa-calendar-days"></i> Sunday, 10th January 2027</p>
+          <div class="event-venue-box">
+            <h4 class="venue-name"><i class="fa-solid fa-gopuram"></i> Guruvayoor Temple</h4>
+            <p class="venue-address">Guruvayoor, Thrissur, Kerala</p>
+          </div>
           <div class="event-actions">
             <a class="btn-map" target="_blank" rel="noopener"
                href="https://www.google.com/maps/search/?api=1&query=Guruvayoor+Temple+Kerala">
@@ -139,32 +179,51 @@
             </a> 
           </div>
         </div>
+        <div class="card-ornament btm-left"></div>
+        <div class="card-ornament btm-right"></div>
       </article>
 
-      <!-- Reception -->
-      <article class="themed-card event-card" data-reveal-stagger>
+      <!-- Reception with FLG Auditorium Photo -->
+      <article class="themed-card event-card reception-card" data-reveal-stagger>
+        <div class="card-ornament top-left"></div>
+        <div class="card-ornament top-right"></div>
         <div class="card-content">
-          <div class="event-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
-          <p class="event-kicker">Grand Reception</p>
+          <div class="event-icon-wrapper">
+            <i class="fa-solid fa-champagne-glasses event-reception-icon"></i>
+          </div>
+          <p class="event-kicker"><i class="fa-solid fa-champagne-glasses"></i> Grand Reception</p>
           <h3 class="event-title">Wedding Reception</h3>
-          <p class="event-date">Sunday, 10th January 2027</p>
-          <p class="event-time">Feast &amp; Celebration</p>
-          <p class="event-venue">FLG Auditorium<br>Changaramkulam</p>
+          <div class="event-time-badge">
+            <i class="fa-regular fa-clock"></i> Feast &amp; Celebration
+          </div>
+          <p class="event-date"><i class="fa-regular fa-calendar-days"></i> Sunday, 10th January 2027</p>
+
+          <!-- Auditorium Photo Showcase -->
+          <div class="auditorium-showcase">
+            <div class="auditorium-img-wrapper">
+              <img src="flg-auditorium.jpg" alt="FLG Convention Centre, Changaramkulam" class="auditorium-photo">
+              <div class="auditorium-overlay-badge">
+                <i class="fa-solid fa-building-columns"></i> FLG Convention Centre
+              </div>
+            </div>
+            <div class="event-venue-box">
+              <h4 class="venue-name">FLG Convention Centre</h4>
+              <p class="venue-address">Changaramkulam, Malappuram District, Kerala</p>
+            </div>
+          </div>
+
           <div class="event-actions">
             <a class="btn-map" target="_blank" rel="noopener"
                href="https://www.google.com/maps/search/?api=1&query=FLG+Auditorium+Changaramkulam">
               <i class="fa-solid fa-location-dot"></i> Open Google Maps
             </a> 
           </div>
-          <div class="qr-container">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fmaps.google.com%2F%3Fq%3DFLG%2BAuditorium%2BChangaramkulam" alt="FLG Auditorium Changaramkulam Location QR" class="qr-code-img">
-            <span class="qr-caption"><i class="fa-solid fa-qrcode"></i> Scan for Venue Location</span>
-          </div>
         </div>
+        <div class="card-ornament btm-left"></div>
+        <div class="card-ornament btm-right"></div>
       </article>
     </div>
   </section>
-
 
 </main>
 
@@ -187,6 +246,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>

@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 280" fill="none" class="kerala-valkannadi-svg">
+  <defs>
+    <linearGradient id="vkGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b37d14"/>
+      <stop offset="25%" stop-color="#f7d358"/>
+      <stop offset="50%" stop-color="#fff8cc"/>
+      <stop offset="75%" stop-color="#e5b22d"/>
+      <stop offset="100%" stop-color="#8a5c0b"/>
+    </linearGradient>
+    <linearGradient id="vkGoldGradDiag" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2aa"/>
+      <stop offset="40%" stop-color="#dfa82c"/>
+      <stop offset="80%" stop-color="#916008"/>
+      <stop offset="100%" stop-color="#5a3803"/>
+    </linearGradient>
+    <!-- Mirror Reflection Gradient -->
+    <linearGradient id="mirrorSheen" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#fff9df" stop-opacity="0.6"/>
+      <stop offset="65%" stop-color="#ecc978" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.8"/>
+    </linearGradient>
+    <radialGradient id="mirrorGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffded"/>
+      <stop offset="70%" stop-color="#fce8a6"/>
+      <stop offset="100%" stop-color="#d49b25"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Top Crown / Kalasam / Choodamani -->
+  <g class="vk-crown">
+    <path d="M80 8 C74 18 70 24 80 32 C90 24 86 18 80 8 Z" fill="url(#vkGoldGrad)"/>
+    <circle cx="80" cy="10" r="3.5" fill="#fff5b3"/>
+    <circle cx="74" cy="22" r="2.5" fill="#f7d358"/>
+    <circle cx="86" cy="22" r="2.5" fill="#f7d358"/>
+    <ellipse cx="80" cy="33" rx="14" ry="4" fill="url(#vkGoldGradDiag)"/>
+  </g>
+
+  <!-- Outer Petals / Sunbeam Rays surrounding Mirror -->
+  <g class="vk-petals" fill="url(#vkGoldGrad)">
+    <!-- 16 radiating ornamental petals around the mirror (cx=80, cy=95, r=52) -->
+    <!-- Top & Angled -->
+    <path d="M80 43 L76 34 L84 34 Z"/>
+    <path d="M96 46 L97 37 L105 40 Z"/>
+    <path d="M112 56 L117 48 L124 54 Z"/>
+    <path d="M124 70 L132 66 L136 74 Z"/>
+    <path d="M130 87 L140 86 L141 95 Z"/>
+    <path d="M130 103 L141 105 L139 114 Z"/>
+    <path d="M124 120 L135 125 L131 133 Z"/>
+    <path d="M112 134 L121 142 L115 148 Z"/>
+    
+    <path d="M64 46 L63 37 L55 40 Z"/>
+    <path d="M48 56 L43 48 L36 54 Z"/>
+    <path d="M36 70 L28 66 L24 74 Z"/>
+    <path d="M30 87 L20 86 L19 95 Z"/>
+    <path d="M30 103 L19 105 L21 114 Z"/>
+    <path d="M36 120 L25 125 L29 133 Z"/>
+    <path d="M48 134 L39 142 L45 148 Z"/>
+  </g>
+
+  <!-- Outer Ornate Rim Ring -->
+  <circle cx="80" cy="95" r="54" fill="url(#vkGoldGradDiag)"/>
+  <circle cx="80" cy="95" r="50" fill="#523203"/>
+  <circle cx="80" cy="95" r="48" fill="url(#vkGoldGrad)"/>
+
+  <!-- Beaded Inner Ring -->
+  <circle cx="80" cy="95" r="44" stroke="#7a4c06" stroke-width="2"/>
+  <circle cx="80" cy="95" r="41" fill="url(#vkGoldGradDiag)"/>
+
+  <!-- Sacred Bronze Mirror Surface (Aranmula Kannadi Reflective Surface) -->
+  <circle cx="80" cy="95" r="37" fill="url(#mirrorGlow)"/>
+  <!-- Mirror Glint / Light Reflection -->
+  <path d="M52 82 C56 70 70 60 84 60 C98 60 92 72 74 76 C60 79 53 82 52 82 Z" fill="url(#mirrorSheen)" opacity="0.8"/>
+  <ellipse cx="65" cy="74" rx="8" ry="4" transform="rotate(-30 65 74)" fill="#ffffff" opacity="0.9"/>
+  <circle cx="102" cy="116" r="3" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Auspicious Sindoor / Kumkumam Dot in subtle reverence -->
+  <circle cx="80" cy="95" r="2.5" fill="#c4161c" opacity="0.75"/>
+
+  <!-- Transition / Neck Junction (പീഠബന്ധം) -->
+  <g class="vk-neck">
+    <path d="M68 146 L92 146 L88 158 L72 158 Z" fill="url(#vkGoldGrad)"/>
+    <ellipse cx="80" cy="146" rx="14" ry="4" fill="url(#vkGoldGradDiag)"/>
+    <ellipse cx="80" cy="158" rx="10" ry="3.5" fill="url(#vkGoldGradDiag)"/>
+    <!-- Floral flanking loops -->
+    <path d="M68 148 C60 144 58 155 68 156 Z" fill="url(#vkGoldGrad)"/>
+    <path d="M92 148 C100 144 102 155 92 156 Z" fill="url(#vkGoldGrad)"/>
+  </g>
+
+  <!-- Ornate Long Handle (വാൽ / പിടുത്തം) -->
+  <g class="vk-handle">
+    <!-- Top handle bead -->
+    <ellipse cx="80" cy="168" rx="8" ry="6" fill="url(#vkGoldGrad)"/>
+    <ellipse cx="80" cy="168" rx="8" ry="2" fill="url(#vkGoldGradDiag)"/>
+
+    <!-- Slender turned shaft -->
+    <path d="M75 174 L85 174 L83 222 L77 222 Z" fill="url(#vkGoldGrad)"/>
+    <!-- Handle fluted ridge details -->
+    <line x1="80" y1="174" x2="80" y2="222" stroke="#fff8cc" stroke-width="1.5"/>
+    <line x1="77" y1="174" x2="77" y2="222" stroke="#664005" stroke-width="0.8"/>
+    <line x1="83" y1="174" x2="83" y2="222" stroke="#664005" stroke-width="0.8"/>
+
+    <!-- Handle Middle Ring -->
+    <ellipse cx="80" cy="198" rx="7" ry="2.5" fill="url(#vkGoldGradDiag)"/>
+
+    <!-- Handle Lower Bulbous Grip -->
+    <ellipse cx="80" cy="226" rx="10" ry="8" fill="url(#vkGoldGrad)"/>
+    <ellipse cx="80" cy="226" rx="10" ry="2.5" fill="url(#vkGoldGradDiag)"/>
+
+    <path d="M76 234 L84 234 L82 248 L78 248 Z" fill="url(#vkGoldGrad)"/>
+    
+    <!-- Bottom Finial / Decorative Ring Pommel -->
+    <ellipse cx="80" cy="248" rx="9" ry="3.5" fill="url(#vkGoldGradDiag)"/>
+    <circle cx="80" cy="260" r="10" stroke="url(#vkGoldGrad)" stroke-width="4" fill="none"/>
+    <circle cx="80" cy="260" r="4" fill="url(#vkGoldGradDiag)"/>
+  </g>
+</svg>

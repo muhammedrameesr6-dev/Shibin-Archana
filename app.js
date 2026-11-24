@@ -144,6 +144,9 @@
     // Completely remove element from DOM after transition
     setTimeout(function () {
       invitationCover.remove();
+      if (window.ScrollTrigger) {
+        ScrollTrigger.refresh();
+      }
     }, 800);
   }
 
